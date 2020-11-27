@@ -14,4 +14,13 @@ public enum LanguageManager {
 
         this.language = language;
     }
+
+    public void changeLanguage(){
+        String nextLine = InputManager.ME.loadInput();
+        if (nextLine.equals("cs")) {
+            LanguageManager.INSTANCE.setLanguage(Language.CESTINA);
+        } else if (nextLine.equals("en")) {
+            LanguageManager.INSTANCE.setLanguage(Language.ENGLISH);
+        }
+    }
 }
